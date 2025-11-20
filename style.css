@@ -1,4 +1,4 @@
-*{
+ *{
             margin:0;
             padding:0;
             box-sizing:border-box;
@@ -12,22 +12,23 @@
             align-items:center;
             background:linear-gradient(135deg, #4f46e5, #9333ea);
             overflow:hidden;
+            padding:20px;
         }
 
-        /* Floating circles */
+        /* Background effects */
         .circle{
             position:absolute;
             border-radius:50%;
             background:rgba(255, 255, 255, 0.15);
             backdrop-filter:blur(5px);
         }
-
         .c1{ width:350px; height:350px; top:-80px; left:-80px; }
         .c2{ width:250px; height:250px; bottom:-60px; right:-60px; }
 
-        /* Glass container */
+        /* Glass Container */
         .container{
-            width:350px;
+            width:400px;
+            max-width:90%;
             padding:40px;
             border-radius:20px;
             background:rgba(255, 255, 255, 0.15);
@@ -91,4 +92,39 @@
             color:#fff;
             text-decoration:none;
             font-weight:bold;
+        }
+
+        /* -------------------------
+           RESPONSIVE BREAKPOINTS
+        -------------------------- */
+
+        /* Tablets */
+        @media (max-width: 768px){
+            .container{
+                padding:30px;
+                width:320px;
+            }
+            .container h2{
+                font-size:24px;
+            }
+        }
+
+        /* Phones */
+        @media (max-width: 480px){
+            body{
+                padding:10px;
+            }
+            .container{
+                padding:25px;
+                border-radius:15px;
+            }
+            input, button{
+                padding:10px;
+                font-size:14px;
+            }
+            .container h2{
+                font-size:22px;
+            }
+            .c1{ width:220px; height:220px; top:-60px; left:-60px; }
+            .c2{ width:180px; height:180px; bottom:-50px; right:-50px; }
         }
